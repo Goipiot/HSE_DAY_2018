@@ -26,6 +26,8 @@ class FacultyDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Helvetica-Light", size: 20)!]
+        
         fucultyImage.image =  UIImage(named: (faculty?.imageUrl)!)
         facultyName.text = faculty?.name
         facultyDepartment.text = faculty?.departments

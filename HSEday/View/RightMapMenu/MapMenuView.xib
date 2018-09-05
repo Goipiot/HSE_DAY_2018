@@ -50,7 +50,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="dZZ-xH-dDQ"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -87,7 +87,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="f0M-UF-ISF"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -124,7 +124,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="tAX-8r-lsF"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -161,7 +161,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="tqk-vZ-0Vx"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -198,7 +198,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="xAg-iY-zM7"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>

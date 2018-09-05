@@ -21,6 +21,7 @@ class QuestDescriptionViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var questTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Helvetica-Light", size: 20)!]
         questTextField.keyboardType = UIKeyboardType.numbersAndPunctuation
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)

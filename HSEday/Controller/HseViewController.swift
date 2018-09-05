@@ -22,6 +22,7 @@ class HseViewController: UIViewController {
     @IBOutlet weak var hseImageHeight: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Helvetica-Light", size: 20)!]
         setNavigationItem()
         menuView = Bundle.main.loadNibNamed("MenuView", owner: MenuView.self() , options: nil)?.first as! MenuView
         self.view.addSubview(menuView)
@@ -79,16 +80,16 @@ extension HseViewController: Routable, MenuViewDelegate{
         }
     }
     func setNavigationItem(){
-        let menuBarItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(menuButtonPressed))
+        let menuBarItem = UIBarButtonItem(image: UIImage(named: "MENU30"), style: .plain, target: self, action: #selector(menuButtonPressed))
         menuBarItem.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = menuBarItem
     }
     @IBAction func menuButtonPressed(_ sender: Any) {
         let barButtonItem = sender as! UIBarButtonItem
-        if barButtonItem.image == UIImage(named:"exit"){
-            barButtonItem.image = UIImage(named:"menu")
+        if barButtonItem.image == UIImage(named:"CANCEL30"){
+            barButtonItem.image = UIImage(named:"MENU30")
         }
-        else {barButtonItem.image = UIImage(named:"exit")}
+        else {barButtonItem.image = UIImage(named:"CANCEL30")}
         animate(sender: menuView)
     }
     func animate(sender: UIView){

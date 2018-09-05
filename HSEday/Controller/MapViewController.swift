@@ -36,6 +36,9 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
         super.viewDidLoad()
         scrollView.delegate = self
 
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Helvetica-Light", size: 20)!]
+        scoreBarButtonItem.setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Helvetica-Light", size: 17)!], for: .normal)
+        scoreBarButtonItem.isEnabled = false
         
         if UserDefaults.isFirstLaunch(){
             let alert = UIAlertController(title: "Квест",
@@ -88,7 +91,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
                 }
             }
         }
-        scoreBarButtonItem.title = "\(completeStagesCounter)/17"
+        scoreBarButtonItem.title = "\(completeStagesCounter)|17"
         if completeStagesCounter == 17{
             let alert = UIAlertController(title: nil,
                                           message: "Поздравляю, ты прошел квест! Теперь ты настоящий ПЕРВАК. Скорее иди за своими подарками и подпишись на иснтаграм @lovjutsu",
@@ -106,6 +109,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             pointButton.setImage(UIImage(named:"Pervak"), for: .normal)
             pointButton.addTarget(self, action:#selector(questButtonClicked), for: UIControlEvents.touchUpInside)
             pointButton.tag = number
+
             let x = Int(questArray[number].x)!
             let y = Int(questArray[number].y)! - 13
             pointButton.center = CGPoint(x: x, y: y)
@@ -125,6 +129,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             pointButton.setImage(UIImage(named:"Myach"), for: .normal)
             pointButton.addTarget(self, action:#selector(mapPointButtonClicked), for: UIControlEvents.touchUpInside)
             pointButton.tag = 100+i
+
             let x = point.x
             let y = point.y
             pointButton.center = CGPoint(x: x, y: y)
@@ -139,6 +144,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             pointButton.setImage(UIImage(named:"Shater"), for: .normal)
             pointButton.addTarget(self, action:#selector(mapPointButtonClicked), for: UIControlEvents.touchUpInside)
             pointButton.tag = 200+i
+
             let x = point.x
             let y = point.y
             pointButton.center = CGPoint(x: x, y: y)
@@ -153,6 +159,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             pointButton.setImage(UIImage(named:"Mikrofon"), for: .normal)
             pointButton.addTarget(self, action:#selector(mapPointButtonClicked), for: UIControlEvents.touchUpInside)
             pointButton.tag = 300+i
+
             let x = point.x
             let y = point.y
             pointButton.center = CGPoint(x: x, y: y)
@@ -167,6 +174,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             pointButton.setImage(UIImage(named:"List"), for: .normal)
             pointButton.addTarget(self, action:#selector(mapPointButtonClicked), for: UIControlEvents.touchUpInside)
             pointButton.tag = 400+i
+
             let x = point.x
             let y = point.y
             pointButton.center = CGPoint(x: x, y: y)
@@ -178,9 +186,10 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
     @IBAction func questButtonClicked(_ sender: UIButton) {
         let popoverViewController = storyboard?.instantiateViewController(withIdentifier: "popoverView") as! PopoverViewController
         popoverViewController.modalPresentationStyle = .popover
-        popoverViewController.preferredContentSize = CGSize(width: 200, height: 40)
+        popoverViewController.preferredContentSize = CGSize(width: 210, height: 40)
         popoverViewController.quest = questArray[sender.tag-1]
         popoverViewController.isQuestButtonClicked = true
+        popoverViewController.view.alpha = 0.8
         questTag = sender.tag-1
         popoverViewController.delegate = self
 
@@ -188,6 +197,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             popoverPresentationController.delegate = self
             popoverPresentationController.sourceView = sender as! PointButton
             popoverPresentationController.sourceRect = sender.bounds
+            
             popoverPresentationController.permittedArrowDirections = [.down]
             popoverPresentationController.backgroundColor = popoverViewController.view.backgroundColor
             present(popoverViewController, animated: true, completion: nil)            
@@ -242,10 +252,10 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
     
     @IBAction func mapButtonPressed(_ sender: Any) {
         let barButtonItem = sender as! UIBarButtonItem
-        if barButtonItem.image == UIImage(named:"exit"){
-            barButtonItem.image = UIImage(named:"map")
+        if barButtonItem.image == UIImage(named:"CANCEL30"){
+            barButtonItem.image = UIImage(named:"MAP30")
         }
-        else {barButtonItem.image = UIImage(named:"exit")}
+        else {barButtonItem.image = UIImage(named:"CANCEL30")}
         animate(sender: menuMapView)
 
     }
@@ -348,17 +358,17 @@ extension ViewController:Routable, MenuViewDelegate, PopoverViewControllerDelega
     }
     
     func setNavigationItem(){
-        let menuBarItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(menuButtonPressed))
+        let menuBarItem = UIBarButtonItem(image: UIImage(named: "MENU30"), style: .plain, target: self, action: #selector(menuButtonPressed))
         menuBarItem.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = menuBarItem
     }
     
     @IBAction func menuButtonPressed(_ sender: Any) {
         let barButtonItem = sender as! UIBarButtonItem
-        if barButtonItem.image == UIImage(named:"exit"){
-            barButtonItem.image = UIImage(named:"menu")
+        if barButtonItem.image == UIImage(named:"CANCEL30"){
+            barButtonItem.image = UIImage(named:"MENU30")
         }
-        else {barButtonItem.image = UIImage(named:"exit")}
+        else {barButtonItem.image = UIImage(named:"CANCEL30")}
         animate(sender: menuView)
     }
     

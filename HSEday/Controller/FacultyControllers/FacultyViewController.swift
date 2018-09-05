@@ -19,6 +19,8 @@ class FacultyViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Helvetica-Light", size: 20)!]
+        
         tableView.rowHeight = 60
         
         setNavigationItem()
@@ -91,10 +93,10 @@ extension FacultyViewController:Routable, MenuViewDelegate{
     }
     @IBAction func menuButtonPressed(_ sender: Any) {
         let barButtonItem = sender as! UIBarButtonItem
-        if barButtonItem.image == UIImage(named:"exit"){
-            barButtonItem.image = UIImage(named:"menu")
+        if barButtonItem.image == UIImage(named:"CANCEL30"){
+            barButtonItem.image = UIImage(named:"MENU30")
         }
-        else {barButtonItem.image = UIImage(named:"exit")}
+        else {barButtonItem.image = UIImage(named:"CANCEL30")}
         animate(sender: self.menuView)
     }
     func animate(sender: UIView){

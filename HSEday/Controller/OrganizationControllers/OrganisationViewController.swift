@@ -24,6 +24,7 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Helvetica-Light", size: 20)!]
         getDataFromJson()
         setNavigationItem()
         addDataToCellArray()
@@ -62,6 +63,7 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
         if indexPath.row == 0{
             let cell = UITableViewCell(style: .default, reuseIdentifier: "topCell")
             cell.textLabel?.text = tableViewData[indexPath.section].title
+            cell.textLabel?.font = UIFont(name: "Helvetica-Light", size: 20)
             return cell
         }
         else{
@@ -69,6 +71,7 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
             cell.orgName.text = tableViewData[indexPath.section].orgInSection[indexPath.row - 1].name
             let imageName = tableViewData[indexPath.section].orgInSection[indexPath.row - 1].imageUrl
             cell.orgImage.image = UIImage(named: imageName)
+            cell.orgName.font = UIFont(name: "Helvetica-Light", size: 17)
             return cell
         }
     }
@@ -118,16 +121,16 @@ extension OrganisationViewController: Routable, MenuViewDelegate{
         }
     }
     func setNavigationItem(){
-        let menuBarItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(menuButtonPressed))
+        let menuBarItem = UIBarButtonItem(image: UIImage(named: "MENU30"), style: .plain, target: self, action: #selector(menuButtonPressed))
         menuBarItem.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = menuBarItem
     }
     @IBAction func menuButtonPressed(_ sender: Any) {
         let barButtonItem = sender as! UIBarButtonItem
-        if barButtonItem.image == UIImage(named:"exit"){
-            barButtonItem.image = UIImage(named:"menu")
+        if barButtonItem.image == UIImage(named:"CANCEL30"){
+            barButtonItem.image = UIImage(named:"MENU30")
         }
-        else {barButtonItem.image = UIImage(named:"exit")}
+        else {barButtonItem.image = UIImage(named:"CANCEL30")}
         animate(sender: menuView)
     }
     func animate(sender: UIView){

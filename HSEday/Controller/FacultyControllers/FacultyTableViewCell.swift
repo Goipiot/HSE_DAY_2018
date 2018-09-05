@@ -13,6 +13,7 @@ class FacultyTableViewCell: UITableViewCell {
     @IBOutlet weak var facultyLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 
