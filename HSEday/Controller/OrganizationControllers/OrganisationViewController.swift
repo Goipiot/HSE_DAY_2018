@@ -63,7 +63,7 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
         if indexPath.row == 0{
             let cell = UITableViewCell(style: .default, reuseIdentifier: "topCell")
             cell.textLabel?.text = tableViewData[indexPath.section].title
-            cell.textLabel?.font = UIFont(name: "Helvetica-Light", size: 20)
+            cell.textLabel?.font = UIFont(name: "Helvetica-Light", size: 17)
             return cell
         }
         else{
