@@ -38,6 +38,7 @@
 		38CB828D2135FCEA00D49FA6 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB828C2135FCEA00D49FA6 /* Organization.swift */; };
 		9733A8572124878800ADD534 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733A8562124878800ADD534 /* Routing.swift */; };
 		9733A859212487B100ADD534 /* StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733A858212487B100ADD534 /* StoryboardIdentifier.swift */; };
+		A89FBBB6D23EB5436A223A93 /* Pods_HSEday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518C0F8980A7FC7F6E5F4183 /* Pods_HSEday.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,8 +72,11 @@
 		388F8D98212DC60500D36E19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HSEday/Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		388F8DAD212DC6EC00D36E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HSEday/Source/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		38CB828C2135FCEA00D49FA6 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		518C0F8980A7FC7F6E5F4183 /* Pods_HSEday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSEday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9733A8562124878800ADD534 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		9733A858212487B100ADD534 /* StoryboardIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifier.swift; sourceTree = "<group>"; };
+		ADCDDED56586ED2BA09E5CC5 /* Pods-HSEday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSEday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSEday/Pods-HSEday.debug.xcconfig"; sourceTree = "<group>"; };
+		DAF300ACB8F6A9FA37AD8285 /* Pods-HSEday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSEday.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSEday/Pods-HSEday.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				388F8D53212951E000D36E19 /* GameKit.framework in Frameworks */,
+				A89FBBB6D23EB5436A223A93 /* Pods_HSEday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +98,7 @@
 				38382E1C212207590034C6ED /* HSEday */,
 				38382E1B212207590034C6ED /* Products */,
 				388F8D51212951E000D36E19 /* Frameworks */,
+				A64A17C9918EE17F48A99F6F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				388F8D52212951E000D36E19 /* GameKit.framework */,
+				518C0F8980A7FC7F6E5F4183 /* Pods_HSEday.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -240,6 +247,15 @@
 			path = QuestControllers;
 			sourceTree = "<group>";
 		};
+		A64A17C9918EE17F48A99F6F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADCDDED56586ED2BA09E5CC5 /* Pods-HSEday.debug.xcconfig */,
+				DAF300ACB8F6A9FA37AD8285 /* Pods-HSEday.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38382E2F2122075A0034C6ED /* Build configuration list for PBXNativeTarget "HSEday" */;
 			buildPhases = (
+				E06A4B3386999D8BEB44E3FF /* [CP] Check Pods Manifest.lock */,
 				38382E16212207590034C6ED /* Sources */,
 				38382E17212207590034C6ED /* Frameworks */,
 				38382E18212207590034C6ED /* Resources */,
+				437DED5DD28925729B395643 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,6 +333,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		437DED5DD28925729B395643 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HSEday/Pods-HSEday-frameworks.sh",
+				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetrica.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HSEday/Pods-HSEday-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E06A4B3386999D8BEB44E3FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HSEday-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		38382E16212207590034C6ED /* Sources */ = {
@@ -484,11 +541,13 @@
 		};
 		38382E302122075A0034C6ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADCDDED56586ED2BA09E5CC5 /* Pods-HSEday.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D88E66YRRN;
 				INFOPLIST_FILE = "$(SRCROOT)/HSEday/Source/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,11 +562,13 @@
 		};
 		38382E312122075A0034C6ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAF300ACB8F6A9FA37AD8285 /* Pods-HSEday.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D88E66YRRN;
 				INFOPLIST_FILE = "$(SRCROOT)/HSEday/Source/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

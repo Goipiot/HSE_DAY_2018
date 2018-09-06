@@ -42,7 +42,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
         
         if UserDefaults.isFirstLaunch(){
             let alert = UIAlertController(title: "Квест",
-                                          message: "Приходи 13 сентября на квест «Путь Первака» от Ингруп СтС и стань настоящим Вышкинцем!Точки квеста отмечены на карте в приложении — пройди все и получи свой приз в шатре выдачи подарков! А если с телефоном что-то пойдет не так, там же ты всегда сможешь получить бумажную версию карты.До встречи на Дне Вышке!",
+                                          message: "Приходи 13 сентября на квест «Путь Первака» от Ингруп СтС и стань настоящим Вышкинцем!Точки квеста отмечены на карте в приложении — пройди все и получи свой приз в шатре выдачи подарков! А если с телефоном что-то пойдет не так, там же ты всегда сможешь получить бумажную версию карты.До встречи на Дне Вышки!",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Понятно", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
@@ -133,7 +133,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
         for point in mapEntPoints{
             let pointButton = Bundle.main.loadNibNamed("PointButtonView", owner: PointButton.self, options: nil)?.first as! PointButton
             imageView.addSubview(pointButton)
-            pointButton.setImage(UIImage(named:"Myach"), for: .normal)
+            pointButton.setImage(UIImage(named:"Shater"), for: .normal)
             pointButton.addTarget(self, action:#selector(mapPointButtonClicked), for: UIControlEvents.touchUpInside)
             pointButton.tag = 100+i
 
@@ -148,7 +148,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
         for point in mapSportPoints{
             let pointButton = Bundle.main.loadNibNamed("PointButtonView", owner: PointButton.self, options: nil)?.first as! PointButton
             imageView.addSubview(pointButton)
-            pointButton.setImage(UIImage(named:"Shater"), for: .normal)
+            pointButton.setImage(UIImage(named:"Myach"), for: .normal)
             pointButton.addTarget(self, action:#selector(mapPointButtonClicked), for: UIControlEvents.touchUpInside)
             pointButton.tag = 200+i
 
@@ -280,7 +280,7 @@ extension ViewController:Routable, MenuViewDelegate, PopoverViewControllerDelega
         switch tag {
         case 0:
             for view in self.imageView.subviews{
-                if view.tag >= 100&&view.tag < 200{
+                if view.tag >= 200&&view.tag < 300{
                     if view.isHidden == true{
                         view.isHidden = false
                     }
@@ -314,7 +314,7 @@ extension ViewController:Routable, MenuViewDelegate, PopoverViewControllerDelega
         
         case 3:
             for view in self.imageView.subviews{
-                if view.tag >= 200&&view.tag < 300{
+                if view.tag >= 100&&view.tag < 200{
                     if view.isHidden == true{
                         view.isHidden = false
                     }
