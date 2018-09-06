@@ -92,9 +92,16 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             }
         }
         scoreBarButtonItem.title = "\(completeStagesCounter)|17"
-        if completeStagesCounter == 17{
+        if completeStagesCounter == 10{
             let alert = UIAlertController(title: nil,
-                                          message: "Поздравляю, ты прошел квест! Теперь ты настоящий ПЕРВАК. Скорее иди за своими подарками и подпишись на иснтаграм @lovjutsu",
+                                          message: "Поздравляю, ты ПОЧТИ прошел квест! Осталось подписаться на инст @lovjutsu и можешь идти забирать свои призы!!! Но знай, что настоящие перваки проходят квест до конца!",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Хорошо", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+        else if completeStagesCounter == 17{
+            let alert = UIAlertController(title: nil,
+                                          message: "Поздравляю, ты полностью прошел квест! Теперь ты настоящий ПЕРВАК. Скорее иди за своими подарками и подпишись на иснтаграм @lovjutsu",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Хорошо", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
