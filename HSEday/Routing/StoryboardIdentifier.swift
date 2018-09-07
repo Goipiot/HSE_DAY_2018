@@ -19,3 +19,4 @@ enum ViewControllerIdentifier : String{
     case hseView = "О ВШЭ"
     case questView = "Квест"
 }
+//Best kostil' in my life
