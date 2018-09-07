@@ -64,25 +64,14 @@ class FacultyViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "segue", sender: indexPath)
     }
-
-    
-
 }
+
 extension FacultyViewController:Routable, MenuViewDelegate{
     func didSelectButton(withTag: Int) {
-        switch withTag {
-        case 0:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.mapView, configure: nil)
-        case 1:
+        if withTag != 1{
+            (self.navigationController as! NavigationController).pushViewController(tag: withTag, animated: true)
+        } else{
             animate(sender: self.menuView)
-        case 2:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.orgView, configure: nil)
-        case 3:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.hseView, configure: nil)
-        case 4:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.questView, configure: nil)
-        default:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.mapView, configure: nil)
         }
     }
     

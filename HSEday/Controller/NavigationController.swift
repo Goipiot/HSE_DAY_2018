@@ -20,8 +20,35 @@ class NavigationController: UINavigationController, MenuViewDelegate{
     }
     
     func didSelectButton(withTag: Int) {
-        print("hui")
         self.viewControllers.removeLast()
     }
-
+    
+    func pushViewController<T: UIViewController>(tag: Int, configure: ((T) -> Void)? = nil, animated: Bool){
+        var identifier : ViewControllerIdentifier!
+        switch tag {
+        case 0:
+            identifier = .mapView
+        case 1:
+            identifier = .facultyView
+        case 2:
+            identifier = .orgView
+        case 3:
+           identifier = .hseView
+        case 4:
+            identifier = .questView
+        default:
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: StoryboardIdentifier.main.rawValue)
+        guard let controller = (identifier != nil
+            ? storyboard.instantiateViewController(withIdentifier: identifier!.rawValue)
+            : storyboard.instantiateInitialViewController()) as? T
+            else { return assertionFailure("Invalid controller for storyboard \(storyboard).") }
+        configure?(controller)
+        pushViewController(controller, animated: animated)
+        if viewControllers.count > 1{
+            viewControllers.remove(at: viewControllers.count - 2)
+        }
+    }
 }

@@ -61,9 +61,10 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
-            let cell = UITableViewCell(style: .default, reuseIdentifier: "topCell")
-            cell.textLabel?.text = tableViewData[indexPath.section].title
-            cell.textLabel?.font = UIFont(name: "Helvetica-Light", size: 17)
+            print("SANYA XUI SOSI")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "topCell", for: indexPath) as! OrganizationTitleTableViewCell
+            cell.label.text = tableViewData[indexPath.section].title
+            cell.label.font = UIFont(name: "Helvetica-Light", size: 17)
             return cell
         }
         else{
@@ -76,17 +77,19 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = tableView.cellForRow(at: indexPath) as? OrganizationTitleTableViewCell
         if indexPath.row == 0{
             if tableViewData[indexPath.section].opened{
                 tableViewData[indexPath.section].opened = false
                 let sections = IndexSet.init(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .none)
+                tableView.reloadSections(sections, with: .fade)
             }
             else{
                 tableViewData[indexPath.section].opened = true
                 let sections = IndexSet.init(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .none)
+                tableView.reloadSections(sections, with: .fade)
             }
+            selectedCell?.rotateArrow()
         }
         else{
             performSegue(withIdentifier: "showOrganizationDetailsSegue", sender: indexPath)
