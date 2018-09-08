@@ -12,6 +12,7 @@ class QuestViewController: UIViewController {
     
     var menuView : MenuView!
     
+    @IBOutlet weak var insButton: UIButton!
     @IBOutlet weak var questDescription: UILabel!
     
     
@@ -22,7 +23,7 @@ class QuestViewController: UIViewController {
         menuView = Bundle.main.loadNibNamed("MenuView", owner: MenuView.self() , options: nil)?.first as! MenuView
         self.view.addSubview(menuView)
         
-        questDescription.text = "Приходи 13 сентября на квест «Путь Первака» от Ингруп СтС и стань настоящим Вышкинцем!\nТочки квеста отмечены на карте в приложении — пройди все и получи свой приз в шатре выдачи подарков! А если с телефоном что-то пойдет не так, там же ты всегда сможешь получить бумажную версию карты.\nДо встречи на Дне Вышки!\n\nЗа прогрессом можно следить на карте приложения"
+//        questDescription.text = ""
 
         // Do any additional setup after loading the view.
     }
@@ -36,7 +37,13 @@ class QuestViewController: UIViewController {
         super.viewDidAppear(animated)
         navigationController?.hidesBarsOnSwipe = false
     }
-
+    @IBAction func instButtonClicked(_ sender: UIButton) {
+        do {
+            try UIApplication.shared.openURL(NSURL(string: "https://www.instagram.com/lovjutsu/")! as URL)
+            print("Success! Yum.")
+        }
+    }
+    
 }
 extension QuestViewController: Routable, MenuViewDelegate{
     func didSelectButton(withTag: Int) {
