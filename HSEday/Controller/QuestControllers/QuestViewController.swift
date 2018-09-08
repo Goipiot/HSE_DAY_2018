@@ -40,7 +40,6 @@ class QuestViewController: UIViewController {
     @IBAction func instButtonClicked(_ sender: UIButton) {
         do {
             try UIApplication.shared.openURL(NSURL(string: "https://www.instagram.com/lovjutsu/")! as URL)
-            print("Success! Yum.")
         }
     }
     

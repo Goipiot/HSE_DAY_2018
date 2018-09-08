@@ -133,14 +133,14 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
         for point in mapEntPoints{
             let pointButton = Bundle.main.loadNibNamed("PointButtonView", owner: PointButton.self, options: nil)?.first as! PointButton
             imageView.addSubview(pointButton)
-            pointButton.setImage(UIImage(named:"Shater"), for: .normal)
+            pointButton.setImage(UIImage(named:"Myach"), for: .normal)
             pointButton.addTarget(self, action:#selector(mapPointButtonClicked), for: UIControlEvents.touchUpInside)
             pointButton.tag = 100+i
 
             let x = point.x
             let y = point.y
             pointButton.center = CGPoint(x: x, y: y)
-            pointButton.bounds.size = CGSize(width: 26, height: 26)
+            pointButton.bounds.size = CGSize(width: 32, height: 26)
             pointButton.titleLabel?.isEnabled = false
             i+=1
         }
@@ -148,14 +148,14 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
         for point in mapSportPoints{
             let pointButton = Bundle.main.loadNibNamed("PointButtonView", owner: PointButton.self, options: nil)?.first as! PointButton
             imageView.addSubview(pointButton)
-            pointButton.setImage(UIImage(named:"Myach"), for: .normal)
+            pointButton.setImage(UIImage(named:"Shater"), for: .normal)
             pointButton.addTarget(self, action:#selector(mapPointButtonClicked), for: UIControlEvents.touchUpInside)
             pointButton.tag = 200+i
 
             let x = point.x
             let y = point.y
             pointButton.center = CGPoint(x: x, y: y)
-            pointButton.bounds.size = CGSize(width: 32, height: 26)
+            pointButton.bounds.size = CGSize(width: 26, height: 26)
             pointButton.titleLabel?.isEnabled = false
             i+=1
         }
@@ -284,7 +284,7 @@ extension ViewController:Routable, MenuViewDelegate, PopoverViewControllerDelega
         switch tag {
         case 0:
             for view in self.imageView.subviews{
-                if view.tag >= 200&&view.tag < 300{
+                if view.tag >= 100&&view.tag < 200{
                     if view.isHidden == true{
                         view.isHidden = false
                     }
@@ -318,7 +318,7 @@ extension ViewController:Routable, MenuViewDelegate, PopoverViewControllerDelega
         
         case 3:
             for view in self.imageView.subviews{
-                if view.tag >= 100&&view.tag < 200{
+                if view.tag >= 200&&view.tag < 300{
                     if view.isHidden == true{
                         view.isHidden = false
                     }
