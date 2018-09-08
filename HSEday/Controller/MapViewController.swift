@@ -260,7 +260,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
     @IBAction func mapButtonPressed(_ sender: Any) {
         let barButtonItem = sender as! UIBarButtonItem
         if barButtonItem.image == UIImage(named:"cancel"){
-            barButtonItem.image = UIImage(named:"map")
+            barButtonItem.image = UIImage(named:"placeholder")
         }
         else {barButtonItem.image = UIImage(named:"cancel")}
         animate(sender: menuMapView)
@@ -365,7 +365,7 @@ extension ViewController:Routable, MenuViewDelegate, PopoverViewControllerDelega
     }
     
     func setNavigationItem(){
-        let menuBarItem = UIBarButtonItem(image: UIImage(named: "MENU30"), style: .plain, target: self, action: #selector(menuButtonPressed))
+        let menuBarItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(menuButtonPressed))
         menuBarItem.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = menuBarItem
     }
