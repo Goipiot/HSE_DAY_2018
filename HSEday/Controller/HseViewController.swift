@@ -80,16 +80,16 @@ extension HseViewController: Routable, MenuViewDelegate{
         }
     }
     func setNavigationItem(){
-        let menuBarItem = UIBarButtonItem(image: UIImage(named: "MENU30"), style: .plain, target: self, action: #selector(menuButtonPressed))
+        let menuBarItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(menuButtonPressed))
         menuBarItem.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = menuBarItem
     }
     @IBAction func menuButtonPressed(_ sender: Any) {
         let barButtonItem = sender as! UIBarButtonItem
-        if barButtonItem.image == UIImage(named:"CANCEL30"){
-            barButtonItem.image = UIImage(named:"MENU30")
+        if barButtonItem.image == UIImage(named:"cancel"){
+            barButtonItem.image = UIImage(named:"menu")
         }
-        else {barButtonItem.image = UIImage(named:"CANCEL30")}
+        else {barButtonItem.image = UIImage(named:"cancel")}
         animate(sender: menuView)
     }
     func animate(sender: UIView){

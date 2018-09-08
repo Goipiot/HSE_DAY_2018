@@ -82,10 +82,10 @@ extension FacultyViewController:Routable, MenuViewDelegate{
     }
     @IBAction func menuButtonPressed(_ sender: Any) {
         let barButtonItem = sender as! UIBarButtonItem
-        if barButtonItem.image == UIImage(named:"CANCEL30"){
-            barButtonItem.image = UIImage(named:"MENU30")
+        if barButtonItem.image == UIImage(named:"cancel"){
+            barButtonItem.image = UIImage(named:"menu")
         }
-        else {barButtonItem.image = UIImage(named:"CANCEL30")}
+        else {barButtonItem.image = UIImage(named:"cancel")}
         animate(sender: self.menuView)
     }
     func animate(sender: UIView){

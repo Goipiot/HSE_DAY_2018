@@ -23,7 +23,7 @@ class OrganizationTitleTableViewCell: UITableViewCell{
                 self.isOpened = false
             })
         } else {
-            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: {
                 self.dropdownArrowImageView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 2))
             }, completion: {_ in
                 print("Goodbye")
