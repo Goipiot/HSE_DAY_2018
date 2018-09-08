@@ -11,6 +11,7 @@ import AVFoundation
 
 class QuestDescriptionViewController: UIViewController, UITextFieldDelegate{
     
+    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var questScrollView: UIScrollView!
     @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var questImage: UIImageView!
@@ -44,12 +45,17 @@ class QuestDescriptionViewController: UIViewController, UITextFieldDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     @IBAction func codePassed(_ sender: UITextField) {
+        statusLabel.isHidden = false
         if sender.text == quest.passcode{
             UserDefaults.standard.set(true, forKey: quest.number)
+            statusLabel.textColor = UIColor.green
+            statusLabel.text = "Правильно"
         }
-        
+        else{
+            statusLabel.textColor = UIColor.red
+            statusLabel.text = "Неправильно"
+        }
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         questScrollView.setContentOffset(CGPoint(x: 0, y: questImage.bounds.size.height), animated: true)
@@ -62,17 +68,4 @@ class QuestDescriptionViewController: UIViewController, UITextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
         questScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
-    
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

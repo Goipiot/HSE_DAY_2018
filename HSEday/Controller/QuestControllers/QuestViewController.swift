@@ -22,7 +22,7 @@ class QuestViewController: UIViewController {
         menuView = Bundle.main.loadNibNamed("MenuView", owner: MenuView.self() , options: nil)?.first as! MenuView
         self.view.addSubview(menuView)
         
-        questDescription.text = "Приходи 13 сентября на квест «Путь Первака» от Ингруп СтС и стань настоящим Вышкинцем!\nТочки квеста отмечены на карте в приложении — пройди все и получи свой приз в шатре выдачи подарков! А если с телефоном что-то пойдет не так, там же ты всегда сможешь получить бумажную версию карты.\nДо встречи на Дне Вышке!\n\nЗа прогрессом можно следить на карте приложения"
+        questDescription.text = "Приходи 13 сентября на квест «Путь Первака» от Ингруп СтС и стань настоящим Вышкинцем!\nТочки квеста отмечены на карте в приложении — пройди все и получи свой приз в шатре выдачи подарков! А если с телефоном что-то пойдет не так, там же ты всегда сможешь получить бумажную версию карты.\nДо встречи на Дне Вышки!\n\nЗа прогрессом можно следить на карте приложения"
 
         // Do any additional setup after loading the view.
     }
@@ -32,18 +32,6 @@ class QuestViewController: UIViewController {
         menuView.frame.origin.y = -view.bounds.height
         menuView.delegate = self
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 extension QuestViewController: Routable, MenuViewDelegate{
     func didSelectButton(withTag: Int) {

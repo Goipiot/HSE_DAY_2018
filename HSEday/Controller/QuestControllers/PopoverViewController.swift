@@ -30,7 +30,7 @@ class PopoverViewController: UIViewController {
         else{
             questName.contentHorizontalAlignment = .center
             questName.setTitle("\(point.name)", for: .normal)
-            questDetailsButton.isHidden = true
+//            questDetailsButton.isHidden = true
             questName.isEnabled = false
         }
     }
@@ -43,7 +43,8 @@ class PopoverViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if isQuestButtonClicked{
             if UserDefaults.standard.bool(forKey: quest.number){
-                questDetailsButton.isHidden = true
+//                questDetailsButton.isHidden = true
+                  questName.isEnabled = false
             }
         }
     }

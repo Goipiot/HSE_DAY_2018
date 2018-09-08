@@ -140,7 +140,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             let x = point.x
             let y = point.y
             pointButton.center = CGPoint(x: x, y: y)
-            pointButton.bounds.size = CGSize(width: 32, height: 26)
+            pointButton.bounds.size = CGSize(width: 26, height: 26)
             pointButton.titleLabel?.isEnabled = false
             i+=1
         }
@@ -155,7 +155,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             let x = point.x
             let y = point.y
             pointButton.center = CGPoint(x: x, y: y)
-            pointButton.bounds.size = CGSize(width: 26, height: 26)
+            pointButton.bounds.size = CGSize(width: 32, height: 26)
             pointButton.titleLabel?.isEnabled = false
             i+=1
         }
