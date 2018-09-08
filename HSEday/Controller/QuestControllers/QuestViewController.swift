@@ -15,12 +15,16 @@ class QuestViewController: UIViewController {
     @IBOutlet weak var insButton: UIButton!
     @IBOutlet weak var questDescription: UILabel!
     
+    deinit {
+        print("gone q")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Helvetica-Light", size: 20)!]
         setNavigationItem()
         menuView = Bundle.main.loadNibNamed("MenuView", owner: MenuView.self() , options: nil)?.first as! MenuView
+        menuView.delegate = self
         self.view.addSubview(menuView)
         
 //        questDescription.text = ""
@@ -31,7 +35,7 @@ class QuestViewController: UIViewController {
         
         menuView.frame = view.bounds
         menuView.frame.origin.y = -view.bounds.height
-        menuView.delegate = self
+
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -46,19 +50,11 @@ class QuestViewController: UIViewController {
 }
 extension QuestViewController: Routable, MenuViewDelegate{
     func didSelectButton(withTag: Int) {
-        switch withTag {
-        case 0:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.mapView, configure: nil)
-        case 1:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.facultyView, configure: nil)
-        case 2:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.orgView, configure: nil)
-        case 3:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.hseView, configure: nil)
-        case 4:
+        if withTag != 4{
+            print(withTag)
+            (self.navigationController as! NavigationController).pushViewController(tag: withTag, animated: true)
+        } else{
             animate(sender: self.menuView)
-        default:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.mapView, configure: nil)
         }
     }
     func setNavigationItem(){

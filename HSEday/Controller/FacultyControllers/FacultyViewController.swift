@@ -15,18 +15,21 @@ class FacultyViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var menuView : MenuView!
     var facultyArray = [Faculty]()
-    
+    deinit {
+        print("gone f")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Helvetica-Light", size: 20)!]
-        
+
         tableView.rowHeight = 60
         
         setNavigationItem()
         getDataFromJson()
         
         menuView = Bundle.main.loadNibNamed("MenuView", owner: MenuView.self() , options: nil)?.first as! MenuView
+        menuView.delegate = self
         self.view.addSubview(menuView)
         
 
@@ -38,7 +41,7 @@ class FacultyViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         menuView.frame = view.bounds
         menuView.frame.origin.y = -view.bounds.height
-        menuView.delegate = self
+        
     }
     
     
@@ -68,6 +71,7 @@ class FacultyViewController: UIViewController, UITableViewDelegate, UITableViewD
 
 extension FacultyViewController:Routable, MenuViewDelegate{
     func didSelectButton(withTag: Int) {
+        
         if withTag != 1{
             (self.navigationController as! NavigationController).pushViewController(tag: withTag, animated: true)
         } else{

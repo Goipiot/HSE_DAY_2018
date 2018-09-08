@@ -28,7 +28,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
     //    var buttonView: ButtonView!
     
     deinit {
-        print("gone")
+        print("gone m")
     }
     
     
@@ -49,7 +49,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
         }
 
         
-        (self.navigationController as! NavigationController).menuView = menuView
+        
        
         
         
@@ -140,7 +140,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             let x = point.x
             let y = point.y
             pointButton.center = CGPoint(x: x, y: y)
-            pointButton.bounds.size = CGSize(width: 32, height: 26)
+            pointButton.bounds.size = CGSize(width: 30, height: 24)
             pointButton.titleLabel?.isEnabled = false
             i+=1
         }
@@ -349,22 +349,11 @@ extension ViewController:Routable, MenuViewDelegate, PopoverViewControllerDelega
         performSegue(withIdentifier: "questDescriptionsSegue", sender: self)
     }
     
-    //Здесь в зависимости от нажатой кнопки из дропдаун меню происходит переход по тегу соотвественно
-    
     func didSelectButton(withTag: Int) {
-        switch withTag {
-        case 0:
+        if withTag != 0{
+            (self.navigationController as! NavigationController).pushViewController(tag: withTag, animated: true)
+        } else{
             animate(sender: self.menuView)
-        case 1:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.facultyView, configure: nil)
-        case 2:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.orgView, configure: nil)
-        case 3:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.hseView, configure: nil)
-        case 4:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.questView, configure: nil)
-        default:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.mapView, configure: nil)
         }
     }
     

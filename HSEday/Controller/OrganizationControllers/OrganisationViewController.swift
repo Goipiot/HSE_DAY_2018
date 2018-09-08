@@ -16,10 +16,14 @@ struct cellData {
 
 class OrganisationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    deinit {
+        print("gone o")
+    }
+    
     var menuView : MenuView!
     var orgArray = [String : [Organization]]()
     var tableViewData = [cellData]()
-
+    
     @IBOutlet weak var orgTableView: UITableView!
     
     override func viewDidLoad() {
@@ -61,7 +65,6 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
-            print("SANYA XUI SOSI")
             let cell = tableView.dequeueReusableCell(withIdentifier: "topCell", for: indexPath) as! OrganizationTitleTableViewCell
             cell.label.text = tableViewData[indexPath.section].title
             cell.label.font = UIFont(name: "Helvetica-Light", size: 17)
@@ -105,27 +108,13 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
         }
         
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        navigationController?.hidesBarsOnSwipe = false
-    }
-    
 }
 extension OrganisationViewController: Routable, MenuViewDelegate{
     func didSelectButton(withTag: Int) {
-        switch withTag {
-        case 0:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.mapView, configure: nil)
-        case 1:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.facultyView, configure: nil)
-        case 2:
+        if withTag != 2{
+            (self.navigationController as! NavigationController).pushViewController(tag: withTag, animated: true)
+        } else{
             animate(sender: self.menuView)
-        case 3:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.hseView, configure: nil)
-        case 4:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.questView, configure: nil)
-        default:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.mapView, configure: nil)
         }
     }
     func setNavigationItem(){
@@ -181,7 +170,7 @@ extension OrganisationViewController: Routable, MenuViewDelegate{
             let imageUrl = object["imageURL"] as! String
             
             
-
+            
             
             let newOrg = Organization(group: group, name: name, description: description, link: link, imageUrl: imageUrl)
             switch newOrg.group{

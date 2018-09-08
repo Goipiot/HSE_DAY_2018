@@ -13,6 +13,10 @@ class HseViewController: UIViewController {
     
     var menuView : MenuView!
     
+    deinit {
+        print("gone h")
+    }
+    
     @IBOutlet weak var hseImageView: UIImageView!
     
     @IBOutlet weak var hseDescription: UILabel!
@@ -58,19 +62,10 @@ class HseViewController: UIViewController {
 }
 extension HseViewController: Routable, MenuViewDelegate{
     func didSelectButton(withTag: Int) {
-        switch withTag {
-        case 0:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.mapView, configure: nil)
-        case 1:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.facultyView, configure: nil)
-        case 2:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.orgView, configure: nil)
-        case 3:
+        if withTag != 3{
+            (self.navigationController as! NavigationController).pushViewController(tag: withTag, animated: true)
+        } else{
             animate(sender: self.menuView)
-        case 4:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.questView, configure: nil)
-        default:
-            show(storyboard: StoryboardIdentifier.main, identifier: ViewControllerIdentifier.mapView, configure: nil)
         }
     }
     func setNavigationItem(){

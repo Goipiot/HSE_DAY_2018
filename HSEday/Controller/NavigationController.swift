@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-class NavigationController: UINavigationController, MenuViewDelegate{
+class NavigationController: UINavigationController{
     
-    var menuView : MenuView!{
-        didSet{
-            if menuView != nil{
-                menuView.delegate = self
-            }
-        }
-    }
-    
-    func didSelectButton(withTag: Int) {
-        self.viewControllers.removeLast()
-    }
+//    var menuView : MenuView!{
+//        didSet{
+//            if menuView != nil{
+//                menuView.delegate = self
+//            }
+//        }
+//    }
+//    
+//    func didSelectButton(withTag: Int) {
+//        self.viewControllers.removeLast()
+//    }
     
     func pushViewController<T: UIViewController>(tag: Int, configure: ((T) -> Void)? = nil, animated: Bool){
         var identifier : ViewControllerIdentifier!
