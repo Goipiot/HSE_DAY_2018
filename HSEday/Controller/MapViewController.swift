@@ -242,6 +242,10 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             present(popoverViewController, animated: true, completion: nil)
         }
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.hidesBarsOnSwipe = false
+    }
     
     
     override func viewDidLayoutSubviews() {

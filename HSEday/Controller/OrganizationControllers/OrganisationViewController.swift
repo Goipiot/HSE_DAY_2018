@@ -105,6 +105,11 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
         }
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.hidesBarsOnSwipe = false
+    }
+    
 }
 extension OrganisationViewController: Routable, MenuViewDelegate{
     func didSelectButton(withTag: Int) {

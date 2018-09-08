@@ -42,6 +42,11 @@ class OrganizationDetailsViewController: UIViewController {
         let rect = AVMakeRect(aspectRatio: image.size, insideRect: boundingRect)
         return rect.size.height
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.hidesBarsOnSwipe = true
+    }
+
     
 
     /*

@@ -32,6 +32,11 @@ class QuestViewController: UIViewController {
         menuView.frame.origin.y = -view.bounds.height
         menuView.delegate = self
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.hidesBarsOnSwipe = false
+    }
+
 }
 extension QuestViewController: Routable, MenuViewDelegate{
     func didSelectButton(withTag: Int) {
