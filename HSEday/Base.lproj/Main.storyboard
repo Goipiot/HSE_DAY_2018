@@ -282,8 +282,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nfL-5X-pty">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4X-Of-jFV">
+                                <rect key="frame" x="276" y="13.5" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="BXd-y0-m9s"/>
+                                    <constraint firstAttribute="width" constant="24" id="Wh9-mR-RHt"/>
+                                </constraints>
+                                <state key="normal" image="arrowWhite"/>
+                                <connections>
+                                    <action selector="questDetailsButtonClicked:" destination="IF1-Zw-7EH" eventType="touchUpInside" id="Qkv-1l-eCx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nfL-5X-pty">
+                                <rect key="frame" x="12" y="10" width="264" height="30"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,16 +306,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.13725490200000001" green="0.2784313725" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="nfL-5X-pty" firstAttribute="top" secondItem="QsG-tF-W5C" secondAttribute="top" id="UB2-ZO-WRo"/>
-                            <constraint firstItem="QsG-tF-W5C" firstAttribute="trailing" secondItem="nfL-5X-pty" secondAttribute="trailing" id="bn3-54-Uhz"/>
-                            <constraint firstItem="QsG-tF-W5C" firstAttribute="bottom" secondItem="nfL-5X-pty" secondAttribute="bottom" id="lcs-c1-fDX"/>
-                            <constraint firstItem="nfL-5X-pty" firstAttribute="leading" secondItem="QsG-tF-W5C" secondAttribute="leading" id="mJa-5M-Bw2"/>
+                            <constraint firstItem="nfL-5X-pty" firstAttribute="top" secondItem="QsG-tF-W5C" secondAttribute="top" constant="10" id="UB2-ZO-WRo"/>
+                            <constraint firstItem="v4X-Of-jFV" firstAttribute="centerY" secondItem="QsG-tF-W5C" secondAttribute="centerY" id="Zdj-eZ-cdJ"/>
+                            <constraint firstItem="v4X-Of-jFV" firstAttribute="leading" secondItem="nfL-5X-pty" secondAttribute="trailing" id="fKr-2J-zO0"/>
+                            <constraint firstItem="QsG-tF-W5C" firstAttribute="bottom" secondItem="nfL-5X-pty" secondAttribute="bottom" constant="10" id="lcs-c1-fDX"/>
+                            <constraint firstItem="nfL-5X-pty" firstAttribute="leading" secondItem="QsG-tF-W5C" secondAttribute="leading" constant="12" id="mJa-5M-Bw2"/>
+                            <constraint firstItem="QsG-tF-W5C" firstAttribute="trailing" secondItem="v4X-Of-jFV" secondAttribute="trailing" id="vp8-I7-hg5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QsG-tF-W5C"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="50"/>
                     <connections>
+                        <outlet property="questDetailsButton" destination="v4X-Of-jFV" id="YCh-b8-C7H"/>
                         <outlet property="questName" destination="nfL-5X-pty" id="5Es-nV-bDc"/>
                     </connections>
                 </viewController>
@@ -752,6 +766,7 @@
     </scenes>
     <resources>
         <image name="arrow" width="256" height="256"/>
+        <image name="arrowWhite" width="512" height="512"/>
         <image name="kk" width="9200" height="5175"/>
         <image name="placeholder" width="28" height="28"/>
     </resources>
