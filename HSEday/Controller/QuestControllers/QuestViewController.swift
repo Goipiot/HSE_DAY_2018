@@ -48,7 +48,6 @@ class QuestViewController: UIViewController {
 extension QuestViewController: Routable, MenuViewDelegate{
     func didSelectButton(withTag: Int) {
         if withTag != 4{
-            print(withTag)
             (self.navigationController as! NavigationController).pushViewController(tag: withTag, animated: true)
         } else{
             animate(sender: self.menuView)

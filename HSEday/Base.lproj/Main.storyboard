@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="id1-8p-sbL">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kk" translatesAutoresizingMaskIntoConstraints="NO" id="KrR-DX-63e">
                                         <rect key="frame" x="0.0" y="0.0" width="1725" height="970"/>
@@ -41,7 +41,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="id1-8p-sbL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Eb8-4L-J6d"/>
+                            <constraint firstItem="id1-8p-sbL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Eb8-4L-J6d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="id1-8p-sbL" secondAttribute="trailing" id="Oe1-dM-TG6"/>
                             <constraint firstItem="id1-8p-sbL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UWO-5W-ZJr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="id1-8p-sbL" secondAttribute="bottom" id="m3L-MP-ghW"/>
@@ -511,15 +511,15 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="34" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDL-XJ-7Hb">
                                                 <rect key="frame" x="14" y="90" width="346" height="476.5"/>
-                                                <string key="text">Приходи 13 сентября на квест «Путь Первака» от Ингруп СтС и стань настоящим Вышкинцем!
+                                                <mutableString key="text">Приходи 13 сентября на квест «Путь Первака» от Ингруп СтС и стань настоящим Вышкинцем!
 
-Точки квеста отмечены на карте в приложении — пройди хотя бы 10 и получи свой приз в шатре выдачи подарков! А если с телефоном что-то пойдет не так - в парке ты всегда сможешь получить бумажную версию карты
+Точки квеста отмечены на карте в приложении — пройди хотя бы 14 и получи свой приз в шатре выдачи подарков! А если с телефоном что-то пойдет не так - в парке ты всегда сможешь получить бумажную версию карты
 
 &gt; Выбери интересующий тебя этап квеста на карте приложения  и перейди на страницу ввода кода. Если введенный тобой код верен - иконка квеста сменится на выполненную 
 
 &gt; За прогрессом можно следить в разделе «Карта» по индикатору в правом верхнем углу 
 
-До встречи на Дне Вышки и удачи!</string>
+До встречи на Дне Вышки и удачи!</mutableString>
                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -587,7 +587,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUs-9y-2GJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="578.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="588.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nBE-wd-ARy">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
@@ -596,19 +596,19 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO8-ng-VmW">
-                                                <rect key="frame" x="15" y="200" width="344" height="22"/>
+                                                <rect key="frame" x="15" y="210" width="344" height="22"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ds-XY-1el">
-                                                <rect key="frame" x="15" y="237" width="344" height="20"/>
+                                                <rect key="frame" x="15" y="247" width="344" height="20"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите код" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8uF-IV-WBH">
-                                                <rect key="frame" x="80" y="307" width="215" height="30"/>
+                                                <rect key="frame" x="80" y="317" width="215" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -618,7 +618,7 @@
                                                 </connections>
                                             </textField>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVg-8k-7AH">
-                                                <rect key="frame" x="15" y="345" width="344" height="21"/>
+                                                <rect key="frame" x="15" y="355" width="344" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -641,7 +641,7 @@
                                             <constraint firstAttribute="trailing" secondItem="nBE-wd-ARy" secondAttribute="trailing" id="gX0-i1-oj6"/>
                                             <constraint firstItem="nBE-wd-ARy" firstAttribute="top" secondItem="cUs-9y-2GJ" secondAttribute="top" identifier="topConstraints" id="gqy-6a-Djv"/>
                                             <constraint firstItem="1Ds-XY-1el" firstAttribute="width" secondItem="HO8-ng-VmW" secondAttribute="width" id="lcz-aq-VHu"/>
-                                            <constraint firstItem="HO8-ng-VmW" firstAttribute="top" secondItem="nBE-wd-ARy" secondAttribute="bottom" constant="20" id="lrj-HC-2QX"/>
+                                            <constraint firstItem="HO8-ng-VmW" firstAttribute="top" secondItem="nBE-wd-ARy" secondAttribute="bottom" constant="30" id="lrj-HC-2QX"/>
                                         </constraints>
                                     </view>
                                 </subviews>

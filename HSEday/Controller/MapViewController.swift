@@ -83,22 +83,21 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             if let button = subview as? PointButton, button.tag < 18{
                 if UserDefaults.standard.bool(forKey: String(describing: button.tag)){
                     completeStagesCounter+=1
-                    print(button.tag)
                     button.setImage(UIImage(named: "PervakDone"), for: .normal)
                 }
             }
         }
         scoreBarButtonItem.title = "\(completeStagesCounter)|17"
-        if completeStagesCounter == 10{
+        if completeStagesCounter == 14{
             let alert = UIAlertController(title: nil,
-                                          message: "Поздравляю, ты ПОЧТИ прошел квест! Осталось подписаться на инст @lovjutsu и можешь идти забирать свои призы!!! Но знай, что настоящие перваки проходят квест до конца!",
+                                          message: "Поздравляю, ты ПОЧТИ прошел квест! Можешь идти за своими призами!!! Но знай, что настоящие перваки проходят квест до конца!",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Хорошо", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
         }
         else if completeStagesCounter == 17{
             let alert = UIAlertController(title: nil,
-                                          message: "Поздравляю, ты полностью прошел квест! Теперь ты настоящий ПЕРВАК. Скорее иди за своими подарками и подпишись на иснтаграм @lovjutsu",
+                                          message: "Поздравляю, ты полностью прошел квест!!! Теперь ты настоящий ПЕРВАК. Скорее иди за своими призами",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Хорошо", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
@@ -113,15 +112,11 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
             pointButton.setImage(UIImage(named:"Pervak"), for: .normal)
             pointButton.addTarget(self, action:#selector(questButtonClicked), for: UIControlEvents.touchUpInside)
             pointButton.tag = number
-
-            let x = Int(questArray[number].x)!
-            let y = Int(questArray[number].y)! - 13
+            let x = Int(questArray[number-1].x)!
+            let y = Int(questArray[number-1].y)! - 13
             pointButton.center = CGPoint(x: x, y: y)
             pointButton.bounds.size = CGSize(width: 26, height: 26)
             pointButton.titleLabel?.isEnabled = false
-            if number == 16{
-                break
-            }
         }
     }
     
@@ -214,7 +209,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
         popoverViewController.modalPresentationStyle = .popover
         popoverViewController.preferredContentSize = CGSize(width: 300, height: 60)
         popoverViewController.isQuestButtonClicked = false
-        print(sender.tag)
         if sender.tag >= 100&&sender.tag < 200{
             popoverViewController.point  = mapEntPoints[sender.tag - 100]
         }

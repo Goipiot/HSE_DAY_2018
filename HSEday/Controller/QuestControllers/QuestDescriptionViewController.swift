@@ -65,6 +65,15 @@ class QuestDescriptionViewController: UIViewController, UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
+    override func viewWillDisappear(_ animated : Bool) {
+        super.viewWillDisappear(animated)
+        
+        if (self.isMovingFromParentViewController){
+            if questTextField.text == quest.passcode{
+                UserDefaults.standard.set(true, forKey: quest.number)
+            }
+        }
+    }
     @available(iOS 10.0, *)
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
         questScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
