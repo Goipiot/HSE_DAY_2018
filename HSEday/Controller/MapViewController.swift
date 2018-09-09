@@ -26,10 +26,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
     
     @IBOutlet weak var scoreBarButtonItem: UIBarButtonItem!
     //    var buttonView: ButtonView!
-    
-    deinit {
-        print("gone m")
-    }
+
     
     
     override func viewDidLoad() {
@@ -280,7 +277,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentat
 }
 extension ViewController:Routable, MenuViewDelegate, PopoverViewControllerDelegate, MenuMapViewDelegate{
     func didSelectMenuMapButton(withTag tag: Int) {
-        print(tag)
         switch tag {
         case 0:
             for view in self.imageView.subviews{

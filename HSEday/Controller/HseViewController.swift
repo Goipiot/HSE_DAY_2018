@@ -12,11 +12,7 @@ import AVFoundation
 class HseViewController: UIViewController {
     
     var menuView : MenuView!
-    
-    deinit {
-        print("gone h")
-    }
-    
+
     @IBOutlet weak var hseImageView: UIImageView!
     
     @IBOutlet weak var hseDescription: UILabel!

@@ -15,10 +15,7 @@ class FacultyViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var menuView : MenuView!
     var facultyArray = [Faculty]()
-    deinit {
-        print("gone f")
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Helvetica-Light", size: 20)!]

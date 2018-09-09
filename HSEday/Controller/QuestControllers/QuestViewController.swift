@@ -14,10 +14,7 @@ class QuestViewController: UIViewController {
     
     @IBOutlet weak var insButton: UIButton!
     @IBOutlet weak var questDescription: UILabel!
-    
-    deinit {
-        print("gone q")
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

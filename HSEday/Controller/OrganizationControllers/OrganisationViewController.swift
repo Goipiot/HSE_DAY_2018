@@ -16,10 +16,6 @@ struct cellData {
 
 class OrganisationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    deinit {
-        print("gone o")
-    }
-    
     var menuView : MenuView!
     var orgArray = [String : [Organization]]()
     var tableViewData = [cellData]()
