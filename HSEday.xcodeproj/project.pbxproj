@@ -36,9 +36,11 @@
 		388F8D9B212DC60600D36E19 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 388F8D98212DC60500D36E19 /* Info.plist */; };
 		388F8DAE212DC6EC00D36E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388F8DAC212DC6EC00D36E19 /* LaunchScreen.storyboard */; };
 		38CB828D2135FCEA00D49FA6 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB828C2135FCEA00D49FA6 /* Organization.swift */; };
+		38F0023D21456F5F00281E98 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F0023C21456F5F00281E98 /* HeaderCell.xib */; };
+		38F0023F2145703B00281E98 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0023E2145703B00281E98 /* HeaderCell.swift */; };
+		38F00241214588C300281E98 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F00240214588C300281E98 /* Launch Screen.storyboard */; };
 		9733A8572124878800ADD534 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733A8562124878800ADD534 /* Routing.swift */; };
 		9733A859212487B100ADD534 /* StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733A858212487B100ADD534 /* StoryboardIdentifier.swift */; };
-		97391B3321431C45002A12BD /* OrganizationTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97391B3221431C45002A12BD /* OrganizationTitleTableViewCell.swift */; };
 		A89FBBB6D23EB5436A223A93 /* Pods_HSEday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518C0F8980A7FC7F6E5F4183 /* Pods_HSEday.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,10 +75,12 @@
 		388F8D98212DC60500D36E19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HSEday/Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		388F8DAD212DC6EC00D36E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HSEday/Source/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		38CB828C2135FCEA00D49FA6 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		38F0023C21456F5F00281E98 /* HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderCell.xib; path = HSEday/View/HeaderCell.xib; sourceTree = SOURCE_ROOT; };
+		38F0023E2145703B00281E98 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderCell.swift; path = HSEday/View/HeaderCell.swift; sourceTree = SOURCE_ROOT; };
+		38F00240214588C300281E98 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "HSEday/View/Launch Screen.storyboard"; sourceTree = SOURCE_ROOT; };
 		518C0F8980A7FC7F6E5F4183 /* Pods_HSEday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSEday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9733A8562124878800ADD534 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		9733A858212487B100ADD534 /* StoryboardIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifier.swift; sourceTree = "<group>"; };
-		97391B3221431C45002A12BD /* OrganizationTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrganizationTitleTableViewCell.swift; path = HSEday/OrganizationTitleTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		ADCDDED56586ED2BA09E5CC5 /* Pods-HSEday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSEday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSEday/Pods-HSEday.debug.xcconfig"; sourceTree = "<group>"; };
 		DAF300ACB8F6A9FA37AD8285 /* Pods-HSEday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSEday.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSEday/Pods-HSEday.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,7 +159,6 @@
 		383A866E2133208C00139C90 /* OrganizationControllers */ = {
 			isa = PBXGroup;
 			children = (
-				97391B3221431C45002A12BD /* OrganizationTitleTableViewCell.swift */,
 				3839729321402D930055D6F2 /* OrganisationViewController.swift */,
 				38397271214026A10055D6F2 /* OrganizationDetailsViewController.swift */,
 				38397272214026A10055D6F2 /* OrganizationTableViewCell.swift */,
@@ -166,9 +169,12 @@
 		388F8D3D2124C67E00D36E19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38F0023E2145703B00281E98 /* HeaderCell.swift */,
+				38F0023C21456F5F00281E98 /* HeaderCell.xib */,
 				3839721B21401CF00055D6F2 /* RightMapMenu */,
 				3839721C21401D200055D6F2 /* DropdownMenu */,
 				3839721D21401D370055D6F2 /* PointsOnMap */,
+				38F00240214588C300281E98 /* Launch Screen.storyboard */,
 			);
 			name = View;
 			path = "New Group";
@@ -331,6 +337,8 @@
 				3839728E21402B420055D6F2 /* JsonData in Resources */,
 				3839727E214027420055D6F2 /* MenuView.xib in Resources */,
 				38397279214027380055D6F2 /* MapMenuView.xib in Resources */,
+				38F0023D21456F5F00281E98 /* HeaderCell.xib in Resources */,
+				38F00241214588C300281E98 /* Launch Screen.storyboard in Resources */,
 				388F8D9B212DC60600D36E19 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,7 +393,7 @@
 				3839727D214027420055D6F2 /* MenuView.swift in Sources */,
 				388F8D67212B63B300D36E19 /* Quest.swift in Sources */,
 				38CB828D2135FCEA00D49FA6 /* Organization.swift in Sources */,
-				97391B3321431C45002A12BD /* OrganizationTitleTableViewCell.swift in Sources */,
+				38F0023F2145703B00281E98 /* HeaderCell.swift in Sources */,
 				388F8D95212DC5F600D36E19 /* AppDelegate.swift in Sources */,
 				388F8D8E212DC5B300D36E19 /* NavigationController.swift in Sources */,
 				383A866A21314F0C00139C90 /* MapPoint.swift in Sources */,

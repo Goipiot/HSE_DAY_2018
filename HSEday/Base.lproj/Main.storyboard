@@ -338,42 +338,8 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="topCell" rowHeight="64" id="o8j-xv-niq" customClass="OrganizationTitleTableViewCell" customModule="HSEday" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o8j-xv-niq" id="QZT-wv-Hc5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWS-Ng-3Po">
-                                                    <rect key="frame" x="25" y="21" width="290" height="20.5"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="hYM-Zv-pZ6">
-                                                    <rect key="frame" x="330" y="14.5" width="35" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="Im4-8I-Oag"/>
-                                                        <constraint firstAttribute="height" constant="35" id="vHL-v6-Nr4"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="RWS-Ng-3Po" firstAttribute="leading" secondItem="QZT-wv-Hc5" secondAttribute="leadingMargin" constant="10" id="JKe-Zu-L01"/>
-                                                <constraint firstItem="hYM-Zv-pZ6" firstAttribute="centerY" secondItem="QZT-wv-Hc5" secondAttribute="centerY" id="egS-Z3-GuH"/>
-                                                <constraint firstItem="RWS-Ng-3Po" firstAttribute="centerY" secondItem="QZT-wv-Hc5" secondAttribute="centerY" id="igU-XJ-fG9"/>
-                                                <constraint firstItem="hYM-Zv-pZ6" firstAttribute="leading" secondItem="RWS-Ng-3Po" secondAttribute="trailing" constant="15" id="j27-pG-cVe"/>
-                                                <constraint firstAttribute="trailing" secondItem="hYM-Zv-pZ6" secondAttribute="trailing" constant="10" id="qAt-9M-dfd"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="dropdownArrowImageView" destination="hYM-Zv-pZ6" id="zlG-Px-6ZF"/>
-                                            <outlet property="label" destination="RWS-Ng-3Po" id="jRT-AD-seO"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="innerCell" rowHeight="100" id="t2A-2f-Yth" userLabel="Inner cell" customClass="OrganizationTableViewCell" customModule="HSEday" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t2A-2f-Yth" id="nY7-YO-Od2">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -545,7 +511,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="34" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDL-XJ-7Hb">
                                                 <rect key="frame" x="14" y="90" width="346" height="476.5"/>
-                                                <mutableString key="text">Приходи 13 сентября на квест «Путь Первака» от Ингруп СтС и стань настоящим Вышкинцем!
+                                                <string key="text">Приходи 13 сентября на квест «Путь Первака» от Ингруп СтС и стань настоящим Вышкинцем!
 
 Точки квеста отмечены на карте в приложении — пройди хотя бы 10 и получи свой приз в шатре выдачи подарков! А если с телефоном что-то пойдет не так - в парке ты всегда сможешь получить бумажную версию карты
 
@@ -553,7 +519,7 @@
 
 &gt; За прогрессом можно следить в разделе «Карта» по индикатору в правом верхнем углу 
 
-До встречи на Дне Вышки и удачи!</mutableString>
+До встречи на Дне Вышки и удачи!</string>
                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -814,7 +780,6 @@
     </scenes>
     <resources>
         <image name="PervakDone" width="170" height="144"/>
-        <image name="arrow" width="256" height="256"/>
         <image name="arrowWhite" width="512" height="512"/>
         <image name="kk" width="9200" height="5175"/>
         <image name="placeholder" width="28" height="28"/>

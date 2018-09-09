@@ -19,6 +19,7 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
     var menuView : MenuView!
     var orgArray = [String : [Organization]]()
     var tableViewData = [cellData]()
+    var headerViews = [HeaderCell]()
     
     @IBOutlet weak var orgTableView: UITableView!
     
@@ -31,13 +32,13 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         self.orgTableView.rowHeight = 60
-        
+        self.orgTableView.sectionHeaderHeight = 65
+        self.orgTableView.sectionFooterHeight = 5
+        self.orgTableView.tableFooterView = UIView()
+
         menuView = Bundle.main.loadNibNamed("MenuView", owner: MenuView.self() , options: nil)?.first as! MenuView
         self.view.addSubview(menuView)
         
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
@@ -47,64 +48,77 @@ class OrganisationViewController: UIViewController, UITableViewDelegate, UITable
         menuView.delegate = self
     }
     
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return tableViewData.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableViewData[section].opened{
-            return tableViewData[section].orgInSection.count + 1
+            return tableViewData[section].orgInSection.count
         }
         else{
-            return 1
+            return 0
         }
     }
-    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = headerViews[section]
+        header.backgroundColor = .white
+        header.headerName.text = tableViewData[section].title
+        header.headerName.font = UIFont(name: "Helvetica-Light", size: 19)
+        header.index = section
+        return header
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "topCell", for: indexPath) as! OrganizationTitleTableViewCell
-            cell.label.text = tableViewData[indexPath.section].title
-            cell.label.font = UIFont(name: "Helvetica-Light", size: 17)
-            return cell
-        }
-        else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "innerCell", for: indexPath) as! OrganizationTableViewCell
-            cell.orgName.text = tableViewData[indexPath.section].orgInSection[indexPath.row - 1].name
-            let imageName = tableViewData[indexPath.section].orgInSection[indexPath.row - 1].imageUrl
-            cell.orgImage.image = UIImage(named: imageName)
-            cell.orgName.font = UIFont(name: "Helvetica-Light", size: 17)
-            return cell
-        }
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCell = tableView.cellForRow(at: indexPath) as? OrganizationTitleTableViewCell
-        if indexPath.row == 0{
-            if tableViewData[indexPath.section].opened{
-                tableViewData[indexPath.section].opened = false
-                let sections = IndexSet.init(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .fade)
-            }
-            else{
-                tableViewData[indexPath.section].opened = true
-                let sections = IndexSet.init(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .fade)
-            }
-            selectedCell?.rotateArrow()
-        }
-        else{
-            performSegue(withIdentifier: "showOrganizationDetailsSegue", sender: indexPath)
-        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "innerCell", for: indexPath) as! OrganizationTableViewCell
+        cell.orgName.text = tableViewData[indexPath.section].orgInSection[indexPath.row].name
+        let imageName = tableViewData[indexPath.section].orgInSection[indexPath.row].imageUrl
+        cell.orgImage.image = UIImage(named: imageName)
+        cell.orgName.font = UIFont(name: "Helvetica-Light", size: 16)
+        return cell
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showOrganizationDetailsSegue", sender: indexPath)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinaton = segue.destination as! OrganizationDetailsViewController
         let index = orgTableView.indexPathForSelectedRow?.row
         let section = orgTableView.indexPathForSelectedRow?.section
-        if index != 0{
-            destinaton.org = tableViewData[section!].orgInSection[index!-1]
+        destinaton.org = tableViewData[section!].orgInSection[index!]
+    }
+    
+    
+}
+extension OrganisationViewController: HeaderCellDelegate{
+
+    
+    func didSelectHeader(atIndex index: Int, headerCell: HeaderCell) {
+        var indexes = [IndexPath]()
+        tableViewData[index].opened = !tableViewData[index].opened
+        for cellIndex in 0 ..< tableViewData[index].orgInSection.count{
+            let indexPath = IndexPath(row: cellIndex, section: index)
+            indexes.append(indexPath)
         }
+
+        if tableViewData[index].opened{
+            orgTableView.insertRows(at: indexes, with: .automatic)
+//            (orgTableView.headerView(forSection: index) as! HeaderCell).addShadow()
+            headerCell.addShadow()
+        }
+        else{
+            orgTableView.deleteRows(at: indexes, with: .automatic)
+//            (orgTableView.headerView(forSection: index) as! HeaderCell).removeShadow()
+            headerCell.removeShadow()
+        }
+        
         
     }
 }
+
+
+
 extension OrganisationViewController: Routable, MenuViewDelegate{
     func didSelectButton(withTag: Int) {
         if withTag != 2{
@@ -231,6 +245,9 @@ extension OrganisationViewController: Routable, MenuViewDelegate{
         for (group, organization) in orgArray{
             let newCellData = cellData(opened: false, orgInSection: organization, title: group)
             tableViewData.append(newCellData)
+            let header = Bundle.main.loadNibNamed("HeaderCell", owner: HeaderCell.self, options: nil)?.first as! HeaderCell
+            header.delegate = self
+            headerViews.append(header)
         }
     }
 }
