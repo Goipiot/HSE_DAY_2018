@@ -690,7 +690,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyK-zt-hW0">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ZD-rs-oO7">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
@@ -699,25 +699,25 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot1-VY-Q2l">
-                                                <rect key="frame" x="15" y="200" width="344" height="22"/>
+                                                <rect key="frame" x="15" y="210" width="344" height="22"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="51" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrr-aQ-MP7">
-                                                <rect key="frame" x="16" y="237" width="344" height="20"/>
+                                                <rect key="frame" x="16" y="247" width="344" height="20"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контакты" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BK-Wx-FTg">
-                                                <rect key="frame" x="16" y="277" width="344" height="22"/>
+                                                <rect key="frame" x="16" y="287" width="344" height="22"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oxq-4P-z9T">
-                                                <rect key="frame" x="10" y="314" width="354" height="36"/>
+                                                <rect key="frame" x="10" y="324" width="354" height="36"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -736,7 +736,7 @@
                                             <constraint firstItem="0BK-Wx-FTg" firstAttribute="top" secondItem="Wrr-aQ-MP7" secondAttribute="bottom" constant="20" id="Sfa-ED-C4D"/>
                                             <constraint firstItem="0BK-Wx-FTg" firstAttribute="width" secondItem="Wrr-aQ-MP7" secondAttribute="width" id="Uly-Ge-4Te"/>
                                             <constraint firstItem="5ZD-rs-oO7" firstAttribute="leading" secondItem="dyK-zt-hW0" secondAttribute="leading" id="a34-sZ-Zzb"/>
-                                            <constraint firstItem="ot1-VY-Q2l" firstAttribute="top" secondItem="5ZD-rs-oO7" secondAttribute="bottom" constant="20" id="br7-mb-wTZ"/>
+                                            <constraint firstItem="ot1-VY-Q2l" firstAttribute="top" secondItem="5ZD-rs-oO7" secondAttribute="bottom" constant="30" id="br7-mb-wTZ"/>
                                             <constraint firstItem="Oxq-4P-z9T" firstAttribute="top" secondItem="0BK-Wx-FTg" secondAttribute="bottom" constant="15" id="fHE-iJ-N2U"/>
                                             <constraint firstAttribute="trailing" secondItem="5ZD-rs-oO7" secondAttribute="trailing" id="iQU-Ne-Dh1"/>
                                             <constraint firstItem="Wrr-aQ-MP7" firstAttribute="centerX" secondItem="dyK-zt-hW0" secondAttribute="centerX" id="wvN-LN-s7y"/>

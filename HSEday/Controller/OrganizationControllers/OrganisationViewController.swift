@@ -103,12 +103,12 @@ extension OrganisationViewController: HeaderCellDelegate{
         }
 
         if tableViewData[index].opened{
-            orgTableView.insertRows(at: indexes, with: .automatic)
+            orgTableView.insertRows(at: indexes, with: .fade)
 //            (orgTableView.headerView(forSection: index) as! HeaderCell).addShadow()
             headerCell.addShadow()
         }
         else{
-            orgTableView.deleteRows(at: indexes, with: .automatic)
+            orgTableView.deleteRows(at: indexes, with: .fade)
 //            (orgTableView.headerView(forSection: index) as! HeaderCell).removeShadow()
             headerCell.removeShadow()
         }

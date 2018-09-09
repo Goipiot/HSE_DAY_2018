@@ -65,6 +65,7 @@ class QuestDescriptionViewController: UIViewController, UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
+    @available(iOS 10.0, *)
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
         questScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
