@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "38382E19212207590034C6ED"
-               BuildableName = "HSEday.app"
-               BlueprintName = "HSEday"
+               BuildableName = "HSE day 2018.app"
+               BlueprintName = "HSE day 2018"
                ReferencedContainer = "container:HSEday.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "38382E19212207590034C6ED"
-            BuildableName = "HSEday.app"
-            BlueprintName = "HSEday"
+            BuildableName = "HSE day 2018.app"
+            BlueprintName = "HSE day 2018"
             ReferencedContainer = "container:HSEday.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "38382E19212207590034C6ED"
-            BuildableName = "HSEday.app"
-            BlueprintName = "HSEday"
+            BuildableName = "HSE day 2018.app"
+            BlueprintName = "HSE day 2018"
             ReferencedContainer = "container:HSEday.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "38382E19212207590034C6ED"
-            BuildableName = "HSEday.app"
-            BlueprintName = "HSEday"
+            BuildableName = "HSE day 2018.app"
+            BlueprintName = "HSE day 2018"
             ReferencedContainer = "container:HSEday.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

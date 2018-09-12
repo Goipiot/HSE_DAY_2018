@@ -26,7 +26,6 @@
 		3839729621402F140055D6F2 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3839729521402F140055D6F2 /* QuestViewController.swift */; };
 		3839729821402F670055D6F2 /* QuestDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3839729721402F670055D6F2 /* QuestDescriptionViewController.swift */; };
 		383A866A21314F0C00139C90 /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383A866921314F0C00139C90 /* MapPoint.swift */; };
-		388F8D53212951E000D36E19 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388F8D52212951E000D36E19 /* GameKit.framework */; };
 		388F8D5C2129AEA900D36E19 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F8D5B2129AEA900D36E19 /* Faculty.swift */; };
 		388F8D67212B63B300D36E19 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F8D66212B63B300D36E19 /* Quest.swift */; };
 		388F8D8E212DC5B300D36E19 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F8D85212DC5B200D36E19 /* NavigationController.swift */; };
@@ -39,13 +38,15 @@
 		38F0023D21456F5F00281E98 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F0023C21456F5F00281E98 /* HeaderCell.xib */; };
 		38F0023F2145703B00281E98 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0023E2145703B00281E98 /* HeaderCell.swift */; };
 		38F00241214588C300281E98 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38F00240214588C300281E98 /* Launch Screen.storyboard */; };
+		38F00243214720C500281E98 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F00242214720C500281E98 /* GameKit.framework */; };
+		481597284B2C28777EC6392A /* Pods_HSEday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209B97A1FA89850156871C04 /* Pods_HSEday.framework */; };
 		9733A8572124878800ADD534 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733A8562124878800ADD534 /* Routing.swift */; };
 		9733A859212487B100ADD534 /* StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9733A858212487B100ADD534 /* StoryboardIdentifier.swift */; };
-		A89FBBB6D23EB5436A223A93 /* Pods_HSEday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518C0F8980A7FC7F6E5F4183 /* Pods_HSEday.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		38382E1A212207590034C6ED /* HSEday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSEday.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		209B97A1FA89850156871C04 /* Pods_HSEday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSEday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38382E1A212207590034C6ED /* HSE day 2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HSE day 2018.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38382E22212207590034C6ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38397271214026A10055D6F2 /* OrganizationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrganizationDetailsViewController.swift; path = HSEday/Controller/OrganizationControllers/OrganizationDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		38397272214026A10055D6F2 /* OrganizationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrganizationTableViewCell.swift; path = HSEday/Controller/OrganizationControllers/OrganizationTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -65,7 +66,6 @@
 		3839729521402F140055D6F2 /* QuestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestViewController.swift; path = HSEday/Controller/QuestControllers/QuestViewController.swift; sourceTree = SOURCE_ROOT; };
 		3839729721402F670055D6F2 /* QuestDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestDescriptionViewController.swift; path = HSEday/Controller/QuestControllers/QuestDescriptionViewController.swift; sourceTree = SOURCE_ROOT; };
 		383A866921314F0C00139C90 /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
-		388F8D52212951E000D36E19 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		388F8D5B2129AEA900D36E19 /* Faculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
 		388F8D66212B63B300D36E19 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
 		388F8D85212DC5B200D36E19 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = HSEday/Controller/NavigationController.swift; sourceTree = SOURCE_ROOT; };
@@ -78,11 +78,11 @@
 		38F0023C21456F5F00281E98 /* HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderCell.xib; path = HSEday/View/HeaderCell.xib; sourceTree = SOURCE_ROOT; };
 		38F0023E2145703B00281E98 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderCell.swift; path = HSEday/View/HeaderCell.swift; sourceTree = SOURCE_ROOT; };
 		38F00240214588C300281E98 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "HSEday/View/Launch Screen.storyboard"; sourceTree = SOURCE_ROOT; };
-		518C0F8980A7FC7F6E5F4183 /* Pods_HSEday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSEday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38F00242214720C500281E98 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		5CB96514035A7ABC910EEC95 /* Pods-HSEday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSEday.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSEday/Pods-HSEday.release.xcconfig"; sourceTree = "<group>"; };
 		9733A8562124878800ADD534 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		9733A858212487B100ADD534 /* StoryboardIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifier.swift; sourceTree = "<group>"; };
-		ADCDDED56586ED2BA09E5CC5 /* Pods-HSEday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSEday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSEday/Pods-HSEday.debug.xcconfig"; sourceTree = "<group>"; };
-		DAF300ACB8F6A9FA37AD8285 /* Pods-HSEday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSEday.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSEday/Pods-HSEday.release.xcconfig"; sourceTree = "<group>"; };
+		ED9C85BE3AEB21E0023EA7CC /* Pods-HSEday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSEday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSEday/Pods-HSEday.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				388F8D53212951E000D36E19 /* GameKit.framework in Frameworks */,
-				A89FBBB6D23EB5436A223A93 /* Pods_HSEday.framework in Frameworks */,
+				481597284B2C28777EC6392A /* Pods_HSEday.framework in Frameworks */,
+				38F00243214720C500281E98 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,14 +104,14 @@
 				38382E1C212207590034C6ED /* HSEday */,
 				38382E1B212207590034C6ED /* Products */,
 				388F8D51212951E000D36E19 /* Frameworks */,
-				A64A17C9918EE17F48A99F6F /* Pods */,
+				8FD3C89B1EC680D7710BF43C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		38382E1B212207590034C6ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38382E1A212207590034C6ED /* HSEday.app */,
+				38382E1A212207590034C6ED /* HSE day 2018.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,8 +219,8 @@
 		388F8D51212951E000D36E19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				388F8D52212951E000D36E19 /* GameKit.framework */,
-				518C0F8980A7FC7F6E5F4183 /* Pods_HSEday.framework */,
+				38F00242214720C500281E98 /* GameKit.framework */,
+				209B97A1FA89850156871C04 /* Pods_HSEday.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -256,11 +256,11 @@
 			path = QuestControllers;
 			sourceTree = "<group>";
 		};
-		A64A17C9918EE17F48A99F6F /* Pods */ = {
+		8FD3C89B1EC680D7710BF43C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ADCDDED56586ED2BA09E5CC5 /* Pods-HSEday.debug.xcconfig */,
-				DAF300ACB8F6A9FA37AD8285 /* Pods-HSEday.release.xcconfig */,
+				ED9C85BE3AEB21E0023EA7CC /* Pods-HSEday.debug.xcconfig */,
+				5CB96514035A7ABC910EEC95 /* Pods-HSEday.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -268,23 +268,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		38382E19212207590034C6ED /* HSEday */ = {
+		38382E19212207590034C6ED /* HSE day 2018 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38382E2F2122075A0034C6ED /* Build configuration list for PBXNativeTarget "HSEday" */;
+			buildConfigurationList = 38382E2F2122075A0034C6ED /* Build configuration list for PBXNativeTarget "HSE day 2018" */;
 			buildPhases = (
-				E06A4B3386999D8BEB44E3FF /* [CP] Check Pods Manifest.lock */,
+				A63773BF4330C32FA1F6C2E4 /* [CP] Check Pods Manifest.lock */,
 				38382E16212207590034C6ED /* Sources */,
 				38382E17212207590034C6ED /* Frameworks */,
 				38382E18212207590034C6ED /* Resources */,
-				BF2341DD335A889D1E4E32BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HSEday;
+			name = "HSE day 2018";
 			productName = HSEday;
-			productReference = 38382E1A212207590034C6ED /* HSEday.app */;
+			productReference = 38382E1A212207590034C6ED /* HSE day 2018.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -320,7 +319,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38382E19212207590034C6ED /* HSEday */,
+				38382E19212207590034C6ED /* HSE day 2018 */,
 			);
 		};
 /* End PBXProject section */
@@ -346,25 +345,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BF2341DD335A889D1E4E32BC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HSEday/Pods-HSEday-frameworks.sh",
-				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetrica.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HSEday/Pods-HSEday-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E06A4B3386999D8BEB44E3FF /* [CP] Check Pods Manifest.lock */ = {
+		A63773BF4330C32FA1F6C2E4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -488,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -542,7 +523,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -553,7 +534,7 @@
 		};
 		38382E302122075A0034C6ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADCDDED56586ED2BA09E5CC5 /* Pods-HSEday.debug.xcconfig */;
+			baseConfigurationReference = ED9C85BE3AEB21E0023EA7CC /* Pods-HSEday.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -574,7 +555,7 @@
 		};
 		38382E312122075A0034C6ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAF300ACB8F6A9FA37AD8285 /* Pods-HSEday.release.xcconfig */;
+			baseConfigurationReference = 5CB96514035A7ABC910EEC95 /* Pods-HSEday.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -605,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38382E2F2122075A0034C6ED /* Build configuration list for PBXNativeTarget "HSEday" */ = {
+		38382E2F2122075A0034C6ED /* Build configuration list for PBXNativeTarget "HSE day 2018" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38382E302122075A0034C6ED /* Debug */,
